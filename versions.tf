@@ -12,6 +12,8 @@ terraform {
 }
 
 provider "aws" {
-  profile = "han"
-  region  = "ap-northeast-2" # Asia Pacific Seoul region
+  region     = "ap-northeast-2"
+  # Hard-coding credentials is not recommended
+  access_key = data.aws_secretsmanager_secret.by-arn.AWS_ACCESS_KEY_ID
+  secret_key = data.aws_secretsmanager_secret.by-arn.AWS_SECRET_ACCESS_KEY
 }
