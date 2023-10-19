@@ -14,6 +14,6 @@ terraform {
 provider "aws" {
   region     = "ap-northeast-2"
   # Hard-coding credentials is not recommended
-  access_key = data.aws_secretsmanager_secret.by-arn.AWS_ACCESS_KEY_ID
-  secret_key = data.aws_secretsmanager_secret.by-arn.AWS_SECRET_ACCESS_KEY
+  access_key = var.key.id
+  secret_key = var.key.pwd
 }
