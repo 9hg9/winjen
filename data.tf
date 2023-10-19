@@ -12,4 +12,5 @@ variable "key" {
     id = data.aws_secretsmanager_secret_version.by.secret_string["AWS_ACCESS_KEY_ID"]
     pwd = data.aws_secretsmanager_secret_version.by.secret_string["AWS_SECRET_ACCESS_KEY"]
   }
+  type = map(string)
 }
