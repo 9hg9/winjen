@@ -12,6 +12,6 @@ terraform {
 }
 
 provider "aws" {
-  profile = "han"
+  profile = "723926525504"
   region  = "ap-northeast-2" # Asia Pacific Seoul region
 }
